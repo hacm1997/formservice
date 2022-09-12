@@ -11,5 +11,6 @@ export type PostData = {
     date: string;
     status: string;
     channels: Array<string>;
-    data: any | null;
+    //data: any | null;
+    data: {name: '', email: '', phone: '', message: ''};
 }

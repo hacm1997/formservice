@@ -1,10 +1,10 @@
 import type { NextPage } from 'next'
-import Post from '../../form/component/content/post/post'
+import AddForm from '../../form/component/content/post/newpost'
 
 const Home: NextPage = () => {
   return (
    <>
-      <Post />
+      <AddForm />
    </>
   )
 }

@@ -42,7 +42,8 @@ class Post extends Component {
             form:'',
             date:'',
             status:'',
-            channels: []
+            channels: ["email"],
+            data: {name: '', email: '', phone: '', message: ''}
         }
     }
 
@@ -63,7 +64,7 @@ class Post extends Component {
     }
 
     render() {
-        const { tenant, info, date, status, channels, form, selectedOption } = this.state;
+        const { tenant, info, date, status, channels, form, data, selectedOption} = this.state;
         return(
             <div>
                 <form onSubmit={this.submitHandler}>
@@ -71,6 +72,7 @@ class Post extends Component {
                     <div>Formulario: <input type="text" name="form" value={form} onChange={this.changeHandler} /></div>
                     <div>Fecha: <input type="date" name="date" value={date} onChange={this.changeHandler} /></div>
                     <div>Status: <input type="text" name="status" value={status} onChange={this.changeHandler} /></div>
+                    
                     <select value={channels} name="channels" onChange={this.changeHandler}>
                         {datos.map((option: any) => (
                             <option value={option.value}>{option.label}</option>

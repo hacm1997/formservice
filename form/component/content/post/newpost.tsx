@@ -19,7 +19,7 @@ const AddForm: React.FC = () => {
     date: newDate,
     status: "Sent",
     channels: ["email"],
-    data: {name: nameIn, email: "", phone: "", message: ""}
+    data: {name: nameIn, email: emailIn, phone: phoneIn, message: messageIn}
   };
   
   const [formulario, setFormulario] = useState<PostData>(initSavePostForm);

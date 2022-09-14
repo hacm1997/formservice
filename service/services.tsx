@@ -27,6 +27,7 @@ export function useGetForms() {
 }
 
 /*export function PostForm(){
+
     const [tenant, setTenant] = useState('');
     const [info, setInfo] = useState('');
     const [date, setDate] = useState('');
@@ -57,9 +58,10 @@ export function useGetForms() {
         setTenant, setInfo, setDate, setSatus, setChannels, setData, savePost];
 }
 
+
 export default PostForm*/
 const create = (data: PostData) => {
-    return http.post<PostData>("/posts", data);
+    return http.post<PostData>("/", data);
 }
 
 const postService = {

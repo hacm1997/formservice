@@ -7,10 +7,13 @@ export enum FetchState {
 
 export type PostData = {
     tenant: string;
-    form: string;
-    date: string;
-    status: string;
-    channels: Array<string>;
+    form_ref: string;
+    created_at: string;
+    comm_pref: Array<string>;
     //data: any | null;
-    data: {name: '', email: '', phone: '', message: ''};
+    form_data: {name: string, type_cc: string, cc: string, email: string, cellphone: string, country: string, 
+        city: string|null, first_time: boolean, years_assisted:string[], topic_to_learn:string[],
+        emprendour: string, entrepreneurship_bussines:string, entrepreneurship_phase:string,
+        interest_more_info: string, expected_event:string, assitance_to_next_event:boolean, data_protection:boolean
+    };
 }
